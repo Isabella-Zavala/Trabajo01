@@ -1,0 +1,118 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* CSS Variables */
+:root {
+    --primary-color: #2b3a4b; /* Azul oscuro */
+    --secondary-color: #f0f0f0; /* Azul claro */
+    --text-color: #333333; /* Gris oscuro */
+    --border-color: #cccccc; /* Gris claro */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--secondary-color); /* Color de fondo utilizando variable CSS */
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color); /* Color de texto utilizando variable CSS */
+}
+
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--border-color); /* Borde alrededor del contenedor */
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-color); /* Fondo utilizando código hexadecimal */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px; /* Tamaño de imagen modificado */
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.social-logo {
+    width: 20px; /* Ajusta el tamaño según sea necesario */
+    height: 20px;
+    vertical-align: middle; /* Alinea verticalmente con el texto */
+    margin-right: 10px; /* Espacio entre el logo y el texto */
+}
+
+.header-info h1 {
+    margin: 0;
+    font-size: 2.5rem; /* Cambio de tamaño de fuente */
+    color: var(--primary-color);
+}
+
+.header-info p {
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.main-content {
+    display: flex;
+}
+
+.left-column {
+    width: 35%;
+    padding-right: 20px;
+    border-right: 2px solid var(--border-color);
+}
+
+.right-column {
+    width: 65%;
+    padding-left: 20px;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+}
+
+section p, section ul {
+    margin: 10px 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 15px;
+}
+
+ul li:before {
+    content: '•';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.right-column ul li {
+    margin-bottom: 20px;
+}
+
+/* Herencia de estilos */
+section p, section ul li {
+    color: var(--text-color); /* Heredando el color del texto de la raíz */
+}
